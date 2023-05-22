@@ -8,7 +8,7 @@ on:
 jobs:
   publish-github:
     name: Publish on GitHub
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         TARGET: [x86_64-unknown-linux-gnu, x86_64-unknown-linux-musl]
@@ -53,16 +53,3 @@ jobs:
           file_glob: true
           overwrite: true
           tag: ${{ github.ref }}
-
-  publish-crates-io:
-    name: Publish on crates.io
-    needs: publish-github
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-      - name: Publish
-        uses: actions-rs/cargo@v1
-        with:
-          command: publish
-          args: --locked --token ${{ secrets.CARGO_TOKEN }}

@@ -1,3 +1,4 @@
+FOR UBUNTU 20.04
 <a href="https://github.com/orhun/rustypaste"><img src="img/rustypaste_logo.png" width="500"></a>
 
 [![GitHub Release](https://img.shields.io/github/v/release/orhun/rustypaste?style=flat&labelColor=823213&color=2c2c2c&logo=GitHub&logoColor=white)](https://github.com/orhun/rustypaste/releases)
